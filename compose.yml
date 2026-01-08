@@ -1,0 +1,18 @@
+services:
+  filesystem:
+    image: seppaleinen/mcp-filesystem:latest
+    build:
+      context: filesystem
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+        - linux/arm64
+
+  hemfile:
+    image: seppaleinen/mcp-helmfile:latest
+    build:
+      context: helmfile
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+        - linux/arm64
